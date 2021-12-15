@@ -47,15 +47,24 @@ require_once("config.php");
 
 // echo $aluno;
 //=-=-==-=-=-=-=-=-=-=-=-=-=-=-==-===-====-
-
-$usuario = new Usuario();
-$usuario->loadById(18);
+//********ALTERAR UM USUARIO*****************
+//****************OK*************************
+// $usuario = new Usuario();
+// $usuario->loadById(18);
  
-// echo $usuario;
 
-$usuario->update("Carlos", "242424");
+// $usuario->update("Carlos", "242424");
+
+// echo $usuario
+
+//=-=-==-=-=-=-=-=-=-=-=-=-=-=-==-===-====-
+//*******DELETANDO UM USUARIO***************
+$usuario = new Usuario();
+$usuario->loadById(15);
+$usuario->delete();
 
 echo $usuario
+
 
 
 ?>
