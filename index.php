@@ -2,29 +2,60 @@
 
 require_once("config.php");
 
-//carrega um usuario
-//$root = new Usuario();
+//carrega um usuario (ok)
+// $root = new Usuario();
 
-//$root->loadbyId(3);
+// $root->loadbyId(38);     
 
-//echo $root;
+// echo $root;
 //=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-//carrega uma lista de usuarios
-//$lista  = Usuario::getlist();
+//(ok)
+// carrega uma lista de usuarios
+// $lista  = Usuario::getlist();
 
-//echo json_encode($lista)
+// echo json_encode($lista)
 
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-
-//$search = Usuario::search("jo");
 
-//echo json_encode($search);
+// (ok)
+// $search = Usuario::search("un");
+
+// echo json_encode($search);
 
 //=-=-=-=-=-=-=-===-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-$usuario = new Usuario();
-$usuario->login ("root","12345");
+// $usuario = new Usuario("root","12345");
+// $usuario->login();
 
-echo $usuario;
+// echo $usuario ;
+
+//=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+//ok
+// $aluno = new Usuario("Rodrigo","123brs");
+
+// $aluno->insert();
+
+// json_encode($aluno);
+//=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+//criando um novo usuario;
+// $aluno = new Usuario("aluno","@aluno");
+
+// $aluno->insert();
+
+// echo $aluno;
+//=-=-==-=-=-=-=-=-=-=-=-=-=-=-==-===-====-
+
+$usuario = new Usuario();
+$usuario->loadById(18);
+ 
+// echo $usuario;
+
+$usuario->update("Carlos", "242424");
+
+echo $usuario
+
 
 ?>
